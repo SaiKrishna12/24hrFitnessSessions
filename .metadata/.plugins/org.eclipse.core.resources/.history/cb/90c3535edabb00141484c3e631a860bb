@@ -1,0 +1,28 @@
+package day12;
+
+public class Car {
+	int price;
+	String model;
+	public  Car()
+	{
+		System.out.println("This is a basic model");
+	}
+	
+	public Car(int p)
+	{
+		price=p;
+	}
+	public Car(int p,String m)
+	{
+		price=p;
+		model=m;
+	}
+	public static void main(String[] args) {
+		Car c1=new Car();
+		Car c2=new Car(1111);
+		System.out.println(c2.price);
+		
+
+	}
+
+}

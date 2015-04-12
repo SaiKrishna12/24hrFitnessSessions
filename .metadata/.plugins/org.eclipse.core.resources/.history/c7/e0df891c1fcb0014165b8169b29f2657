@@ -1,0 +1,31 @@
+package day23;
+
+public class Pattern1 {
+
+	
+	public static void main(String[] args) {
+		int a=5;
+		int c=(a+(a-1))-2;
+		
+		for(int i=1;i<=a;i++)
+		{
+			int j;
+			for( j=1;j<=i;j++)
+			{
+				System.out.print(j);
+			}
+			for(int k=1;k<=c;k++)
+			{
+				System.out.print(" ");
+			}
+			c=c-2;
+			for(int l=j-1;l>=j;l--)
+			{
+				System.out.print(l);
+			}
+			System.out.println();
+		}
+
+	}
+
+}

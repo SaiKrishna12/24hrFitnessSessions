@@ -1,0 +1,12 @@
+package day8;
+
+public class ExceptionHandling {
+
+	
+	public static void main(String[] args) {
+		System.out.println("Selenium");
+		System.out.println(100/0);
+		System.out.println("QTP");
+	}
+
+}

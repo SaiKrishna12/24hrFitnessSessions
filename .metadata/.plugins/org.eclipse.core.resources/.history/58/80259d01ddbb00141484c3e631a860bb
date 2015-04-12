@@ -1,0 +1,32 @@
+package day12;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class MultipleWindows {
+	
+	//FirefoxDriver driver;
+	ChromeDriver driver;
+	@BeforeMethod
+	public void setup()
+	{
+		/*ProfilesIni pr=new ProfilesIni();
+		FirefoxProfile fp=pr.getProfile("SeleniumUser");*/
+		System.setProperty("webdriver.chrome.driver","c:\\chromedriver.exe");
+		
+		driver=new ChromeDriver();
+		driver.get("http://citibank.com");
+	}
+	
+	@Test
+	public void multiplewindowtest()
+	{
+		driver.findElement(By.linkText("Learn More")).click();
+	}
+
+}

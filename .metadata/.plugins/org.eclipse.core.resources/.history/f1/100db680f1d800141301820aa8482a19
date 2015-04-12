@@ -1,0 +1,76 @@
+package day31;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class DatadrivenTestingonGrid {
+	@Parameters("browser")
+	@Test
+	public void dropdownTest(String b) throws IOException
+	{
+		System.out.println(b);
+		DesiredCapabilities cap=null;
+		if(b.equals("firefox"))
+		{
+			cap=DesiredCapabilities.firefox();
+			cap.setBrowserName("firefox");
+			cap.setPlatform(Platform.WINDOWS);
+			
+		}
+		else if(b.equals("chrome"))
+		{
+			cap=DesiredCapabilities.chrome();
+			cap.setBrowserName("chrome");
+			cap.setPlatform(Platform.ANY);
+		}
+		
+		RemoteWebDriver driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
+		FileInputStream f=new FileInputStream("D:\\10-30SessionOnline\\WebdriverProject\\src\\com\\sai\\excelfiles\\links.xlsx");
+		XSSFWorkbook wb=new XSSFWorkbook(f);
+		XSSFSheet ws=wb.getSheet("Sheet1");
+		Iterator<Row> row=ws.iterator();
+		row.next();
+		while(row.hasNext())
+		{
+			Row r=row.next();
+			String linkname=r.getCell(0).getStringCellValue();
+			driver.findElement(By.linkText(linkname)).click();
+			String acturl=driver.getCurrentUrl();
+			Cell c=r.createCell(2);
+			c.setCellValue(acturl);
+			String expurl=r.getCell(1).getStringCellValue();
+			if(acturl.equals(expurl))
+			{
+				c=r.createCell(3);
+				c.setCellValue("Passed");
+			}
+			else
+			{
+				c=r.createCell(3);
+				c.setCellValue("Failed");
+			}
+			driver.navigate().back();
+			
+			
+		}
+		FileOutputStream f1=new FileOutputStream("D:\\10-30SessionOnline\\WebdriverProject\\src\\com\\sai\\resultexcelfiles\\"+b+"_links.xlsx");
+		wb.write(f1);
+		f1.close();
+	}	
+
+}

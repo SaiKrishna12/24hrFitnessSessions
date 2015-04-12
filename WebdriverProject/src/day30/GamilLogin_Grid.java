@@ -1,0 +1,31 @@
+package day30;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+public class GamilLogin_Grid {
+	
+	@Test
+	public void loginTest() throws MalformedURLException
+	{
+		DesiredCapabilities cap=null;
+		cap=DesiredCapabilities.chrome();
+		cap.setBrowserName("chrome");
+		cap.setPlatform(Platform.LINUX);
+		
+		RemoteWebDriver driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
+		driver.get("http://gmail.com");
+		driver.findElement(By.id("Email")).sendKeys("saikrishna123");
+		driver.findElement(By.id("Passwd")).sendKeys("krishna123");
+		driver.findElement(By.id("signIn")).click();
+		
+		
+	}
+
+}

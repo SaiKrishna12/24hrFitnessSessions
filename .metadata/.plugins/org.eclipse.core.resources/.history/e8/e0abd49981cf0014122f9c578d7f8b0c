@@ -1,0 +1,25 @@
+package day26;
+
+public class SampleMethodOverloading {
+
+	public static int sumint(int x,int y)
+	{
+		return x+y;
+	}
+	public static double sumdouble(double x,double y)
+	{
+		return x+y;
+	}
+	public static String sumString(String x,String y)
+	{
+		return x+y;
+	}
+	public static void main(String[] args) {
+		System.out.println(sumint(10,20));
+		System.out.println(sumdouble(10.50,35.78));
+		System.out.println(sumString("Hello ","Friends"));
+		
+
+	}
+
+}

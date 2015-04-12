@@ -1,0 +1,22 @@
+package day9;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.testng.annotations.BeforeMethod;
+
+public class ImplicitWait {
+	
+	@BeforeMethod
+	public void setup()
+	{
+		ProfilesIni pr=new ProfilesIni();
+		FirefoxProfile fp=pr.getProfile("SeleniumUser");
+		FirefoxDriver driver=new FirefoxDriver(fp);
+		driver.get("http://citibank.com");
+	}
+	
+	@test
+	p
+
+}

@@ -1,0 +1,29 @@
+package day24;
+
+public class DoubleDimensionalArray {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		String[][] str=new String[2][3];
+		str[0][0]="Selenium";
+		str[0][1]="UFT";
+		str[0][2]="LR";
+		
+		str[1][0]="Jmeter";
+		str[1][1]="codedui";
+		str[1][2]="Sopaui";
+		
+		for(int i=0;i<str.length;i++)
+		{
+			for(int j=0;j<str[i].length;j++)
+			{
+				System.out.print(str[i][j]+"  ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}

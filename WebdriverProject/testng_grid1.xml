@@ -1,0 +1,17 @@
+
+<suite name="Grid Demo Suite" parallel="tests">
+  
+  <test name="Dropdown on Firefox" >
+   <parameter name="browser"  value="firefox" />
+    <classes>
+	   <class name="day31.DBTestingonGrid" />
+    </classes>
+  </test>
+ 
+  <test name="Dropdown on Chrome" >
+   <parameter name="browser"  value="chrome" />
+    <classes>
+	   <class name="day31.DBTestingonGrid" />
+    </classes>
+  </test>
+</suite>

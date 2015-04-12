@@ -1,0 +1,49 @@
+package day25;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ActionKeywordsLogin {
+	
+	
+	
+	FirefoxDriver  driver=null;
+	public void launchBrowser()
+	{
+		driver=new FirefoxDriver();
+	}
+	public void navigate()
+	{
+		driver.get("http://localhost:8090/orangehrm");
+	}
+	public void enterUsername() throws IOException
+	{
+		FileInputStream f=new FileInputStream("D:\\10-30SessionOnline\\WebdriverProject\\ObjectRepository.properties");
+		Properties prop=new Properties();
+		prop.load(f);
+		driver.findElement(By.id(prop.getProperty("username"))).sendKeys("Admin");
+	}
+	public void enterPassword() throws IOException
+	{
+		FileInputStream f=new FileInputStream("D:\\10-30SessionOnline\\WebdriverProject\\ObjectRepository.properties");
+		Properties prop=new Properties();
+		prop.load(f);
+
+		driver.findElement(By.id(prop.getProperty("password"))).sendKeys("Admin");
+		
+	}
+	public void clickLogin() throws IOException
+	{
+		FileInputStream f=new FileInputStream("D:\\10-30SessionOnline\\WebdriverProject\\ObjectRepository.properties");
+		Properties prop=new Properties();
+		prop.load(f);
+		driver.findElement(By.id(prop.getProperty("login"))).click();
+	}
+	
+
+}

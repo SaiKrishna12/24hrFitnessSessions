@@ -1,0 +1,15 @@
+package day24;
+
+public class Conversions {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		double d=12345;
+		String str=Double.toString(d);
+		System.out.println(str);
+
+	}
+
+}

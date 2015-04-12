@@ -1,0 +1,23 @@
+package day6;
+
+public class Functions1 {
+
+	
+	public static void main(String[] args)
+	{
+		int a=10,b=20,c=30;
+		sumAll(a,b,c);
+
+	}
+	
+	public static void sumAll(int i,int j,int k)
+	{
+		int temp=i+j+k;
+		System.out.println(temp);
+		
+	}
+	
+	
+	
+
+}

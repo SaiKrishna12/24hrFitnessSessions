@@ -1,0 +1,15 @@
+<!--Name of the test suite ...can be anything--> 
+<suite name="Newtours Demo Suite">
+  <!--Name of the test as it should reflect in testng html report-->
+  <test name="Login on newtours app" >
+    <classes>
+	   <class name="day18.Login" />
+    </classes>
+  </test>
+ 
+   <test name="Links on newtours app" >
+    <classes>
+	   <class name="day18.Links" />
+    </classes>
+  </test>
+</suite>
