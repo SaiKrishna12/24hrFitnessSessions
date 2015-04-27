@@ -1,0 +1,44 @@
+package day33.pom;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class RegisterMercuryTours {
+	
+	@FindBy(name="firstName")
+	WebElement firstname;
+	@FindBy(name="lastName")
+	WebElement lasttname;
+	@FindBy(name="phone")
+	WebElement phone;
+	@FindBy(name="userName")
+	WebElement username;
+	@FindBy(name="address1")
+	WebElement adress1;
+	@FindBy(name="city")
+	WebElement city;
+	@FindBy(name="state")
+	WebElement state;
+	@FindBy(name="postalCode")
+	WebElement postalcode;
+	@FindBy(name="country")
+	WebElement country;
+	@FindBy(name="email")
+	WebElement email;
+	@FindBy(name="password")
+	WebElement password;
+	@FindBy(name="confirmPassword")
+	WebElement confirmPassword;
+	@FindBy(name="register")
+	WebElement register;
+	public void contactInformation(Row r)
+	{
+		firstname.sendKeys(r.getCell(0).getStringCellValue());
+		email.sendKeys(r.getCell(9).getStringCellValue());
+		register.click();
+		
+	}
+	
+
+}

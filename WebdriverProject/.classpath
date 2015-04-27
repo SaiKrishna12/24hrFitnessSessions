@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="D:/10-30SessionOnline/WebdriverProject/JarFiles/poi-scratchpad-3.10.1-20140818.jar"/>
 	<classpathentry kind="lib" path="D:/10-30SessionOnline/WebdriverProject/JarFiles/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="lib" path="D:/10-30SessionOnline/WebdriverProject/JarFiles/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="E:/JarFiles/log4j-1.2.15.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

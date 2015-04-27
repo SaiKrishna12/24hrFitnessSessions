@@ -1,0 +1,39 @@
+package day33.pom;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Iterator;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class PomNew  extends Constants{
+	
+	@Test
+	public void newTest() throws IOException
+	{
+		FileInputStream f=new FileInputStream("D:\\10-30SessionOnline\\WebdriverProject\\src\\com\\sai\\excelfiles\\registration11.xlsx");
+		XSSFWorkbook  wb=new XSSFWorkbook(f);
+		XSSFSheet ws=wb.getSheet("Sheet1");
+		FirefoxDriver driver=new FirefoxDriver();
+		driver.get("http://newtours.demoaut.com");
+		rm=PageFactory.initElements(driver,RegisterMercuryTours.class);
+		Iterator<Row> row=ws.iterator();
+		row.hasNext();
+		wm.menu.registerTest();
+		while(row.hasNext())
+		{
+			Row r=row.next();
+			rm.contactInformation(r);
+		}
+		
+		
+		
+		
+	}
+
+}

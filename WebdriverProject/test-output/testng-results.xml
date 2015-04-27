@@ -1,55 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15314" started-at="2015-04-04T04:20:45Z" finished-at="2015-04-04T04:21:00Z">
+  <suite name="Default suite" duration-ms="61429" started-at="2015-04-21T04:17:13Z" finished-at="2015-04-21T04:18:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15314" started-at="2015-04-04T04:20:45Z" finished-at="2015-04-04T04:21:00Z">
-      <class name="day32.GamilLogin_DataProvider">
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:day32.GamilLogin_DataProvider@76724357]" name="loginTest" duration-ms="9546" started-at="2015-04-03T21:20:45Z" data-provider="myData" finished-at="2015-04-03T21:20:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[saikrishna123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[krishna123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="61429" started-at="2015-04-21T04:17:13Z" finished-at="2015-04-21T04:18:14Z">
+      <class name="day33.pom.PomControl1">
+        <test-method status="PASS" signature="pomControlTest()[pri:0, instance:day33.pom.PomControl1@4351aa16]" name="pomControlTest" duration-ms="61405" started-at="2015-04-20T21:17:13Z" finished-at="2015-04-20T21:18:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:day32.GamilLogin_DataProvider@76724357]" name="loginTest" duration-ms="15263" started-at="2015-04-03T21:20:45Z" data-provider="myData" finished-at="2015-04-03T21:21:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[saikrishna123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[krishna123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- day32.GamilLogin_DataProvider -->
+        </test-method> <!-- pomControlTest -->
+      </class> <!-- day33.pom.PomControl1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

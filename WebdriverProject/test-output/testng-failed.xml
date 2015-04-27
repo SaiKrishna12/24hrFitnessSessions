@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Grid Demo Suite]" parallel="tests">
-  <parameter name="browser" value="chrome"/>
-  <test name="Dropdown on Chrome(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="day31.DBTestingonGrid">
+      <class name="day33.pom.PomControl1">
         <methods>
-          <include name="dbTest" invocation-numbers="0"/>
+          <include name="pomControlTest"/>
         </methods>
-      </class> <!-- day31.DBTestingonGrid -->
+      </class> <!-- day33.pom.PomControl1 -->
     </classes>
-  </test> <!-- Dropdown on Chrome(failed) -->
-</suite> <!-- Failed suite [Grid Demo Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,12 @@
+package day33.pom;
+
+import com.sai.utility.ExcelOperations;
+
+public class Constants {
+	
+	String path1="D:\\10-30SessionOnline\\WebdriverProject\\src\\com\\sai\\excelfiles\\registration11.xlsx";
+	
+	ExcelOperations eo=new ExcelOperations();
+	
+
+}

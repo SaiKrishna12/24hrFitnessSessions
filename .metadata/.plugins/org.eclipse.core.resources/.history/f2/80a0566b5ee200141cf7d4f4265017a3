@@ -1,0 +1,9 @@
+package day33.pom;
+
+public class WelcomeMercuryTours {
+	
+	@FindBy(name="userName")
+	WebElement username;
+	
+
+}

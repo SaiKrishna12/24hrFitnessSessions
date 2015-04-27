@@ -1,0 +1,12 @@
+package day33.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Constants {
+	static WebDriver dirver=null;
+	WelcomeMercuryTours wm;
+	RegisterMercuryTours rm;
+	
+
+}

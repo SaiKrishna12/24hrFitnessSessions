@@ -1,0 +1,34 @@
+package day33.pom;
+
+import java.util.concurrent.TimeUnit;
+
+import org.omg.IOP.ProfileIdHelper;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class PomControl1 {
+	
+	@Test
+	public void pomControlTest()
+	{
+		ProfilesIni pr=new ProfilesIni();
+		FirefoxProfile fp=pr.getProfile("SeleniumUser");
+		FirefoxDriver driver=new FirefoxDriver(fp);
+		driver.get("http://newtours.demoaut.com");
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
+		WelcomeMercuryTours wm=PageFactory.initElements(driver,WelcomeMercuryTours.class);
+		wm.findAFlight("myusername","mypassword");
+		driver.navigate().back();
+		wm.destinationsTest();
+		driver.navigate().back();
+		wm.register();
+		wm.menu.contactTest();
+		driver.navigate().back();
+		wm.menu.signonTest();
+	}
+
+}
